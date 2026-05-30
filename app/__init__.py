@@ -1,0 +1,1 @@
+# scada-edge-adquisition package

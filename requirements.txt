@@ -1,0 +1,21 @@
+# =========================================================
+# scada-edge-adquisition — Dependencias
+# =========================================================
+
+# --- Comunicación MQTT (async, soporta mTLS) ---
+aiomqtt>=2.3.0
+
+# --- Drivers industriales ---
+pyModbusTCP>=0.2.1        # Modbus TCP ligero
+asyncua>=1.1.5            # OPC UA async nativo
+
+# --- Configuración y validación ---
+pydantic>=2.0.0
+pydantic-settings>=2.0.0  # Carga .env con tipado fuerte
+python-dotenv>=1.0.0
+
+# --- Persistencia local (SQLite async) ---
+aiosqlite>=0.19.0
+
+# --- Utilidades ---
+python-json-logger>=2.0.7  # Logs estructurados en JSON

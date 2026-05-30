@@ -1,0 +1,38 @@
+# ── Python ──────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# ── Entornos virtuales ───────────────────────────────────────────────
+venv/
+.venv/
+env/
+.env
+
+# ── Base de datos local (persistente en volumen Docker) ──────────────
+data/
+*.sqlite
+*.sqlite3
+*.db
+
+# ── Certificados (NUNCA en el repositorio) ───────────────────────────
+certs/*.crt
+certs/*.key
+certs/*.pem
+# Se conserva el placeholder:
+!certs/.gitkeep
+
+# ── IDE y sistema ────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.DS_Store
+Thumbs.db
+
+# ── Logs ─────────────────────────────────────────────────────────────
+*.log
+logs/

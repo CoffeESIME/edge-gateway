@@ -1,0 +1,9 @@
+# Directorio para certificados mTLS
+# Este directorio debe montarse como volumen en Docker.
+#
+# Archivos esperados:
+#   ca.crt      — Certificado de la Autoridad Certificadora raíz
+#   edge.crt    — Certificado del cliente Edge (firmado por el CA)
+#   edge.key    — Clave privada del cliente Edge
+#
+# NUNCA incluyas certificados reales en el control de versiones.
