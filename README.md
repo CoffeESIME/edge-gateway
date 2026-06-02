@@ -2,6 +2,17 @@
 
 Este módulo es el responsable de la interacción directa con la planta física. Ha sido diseñado utilizando el framework FastAPI bajo el paradigma asíncrono (`asyncio`) para garantizar un alto rendimiento en I/O de red, operando bajo una arquitectura descentralizada (Edge-to-Cloud).
 
+---
+
+## 🌐 Ecosistema SCADA Completo
+
+Este Gateway de Adquisición Edge es solo una parte de un sistema distribuido. Para entender la arquitectura completa y levantar el sistema, revisa los otros repositorios:
+
+1. **[dockerfiles-scada-iiot](https://github.com/CoffeESIME/dockerfiles-scada-iiot)**: Repositorio central de infraestructura que contiene los `docker-compose` para desplegar el broker MQTT, la base de datos (TimescaleDB) y generar los certificados de seguridad mTLS.
+2. **[react-scada-backend](https://github.com/CoffeESIME/react-scada-backend)**: El núcleo del sistema central, encargado del CRUD de Tags, persistencia de históricos, alarmas y gestión de pantallas.
+3. **[react-scada-hmi](https://github.com/CoffeESIME/react-scada-hmi)**: Interfaz gráfica web (Next.js) con un diseñador de diagramas SCADA (React Flow) para visualización en tiempo real.
+4. **[edge-gateway](https://github.com/CoffeESIME/edge-gateway)**: *(Este repositorio)* Instalado en la planta física (Edge) para extraer datos de PLCs/sensores y subirlos de forma segura al broker en la nube.
+
 ## 1. Lógica de Adquisición (Backend Edge)
 
 A diferencia de un diseño monolítico, el motor de adquisición del Edge orquesta el muestreo de datos mediante **tareas independientes por cada Tag**.
